@@ -1,13 +1,23 @@
 package com.javacalcularmedia.eduardo.servico;
 
-import com.javacalcularmedia.eduardo.entidade.Usuario;
+import com.javacalcularmedia.eduardo.entidade.Aluno;
 import org.springframework.stereotype.Service;
 
 @Service
 public class MediaService {
 
-    public String showUsuario(Usuario usuario) {
-        return "Usuario: " + usuario.getNome();
+    public String showAluno(Aluno aluno) {
+       float media = aluno.getMedia();
+       String status = "";
+       if (media < 6) {
+           status = "O aluno foi reprovado!";
+       }
+       else {
+           status = "O aluno foi aprovado!";
+       }
+
+       return String.format("Aluno: %s\nMédia: %.2f\n%s"
+               , aluno.getNome(), media, status);
     }
 
 }

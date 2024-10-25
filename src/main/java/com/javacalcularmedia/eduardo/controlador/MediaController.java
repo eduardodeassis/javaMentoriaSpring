@@ -1,6 +1,6 @@
 package com.javacalcularmedia.eduardo.controlador;
 
-import com.javacalcularmedia.eduardo.entidade.Usuario;
+import com.javacalcularmedia.eduardo.entidade.Aluno;
 import com.javacalcularmedia.eduardo.servico.MediaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,8 +18,6 @@ public class MediaController {
         this.mediaService = mediaService;
     }
 
-    @Autowired
-
     @GetMapping("/ola")
     public String ola() {
         return "Olá, Mundo!";
@@ -31,8 +29,7 @@ public class MediaController {
     }
 
     @PostMapping("")
-    public String testeUsuarioPost(@RequestBody Usuario body) {
-        return mediaService.showUsuario(body);
-                //"Olá, " + body.getNome() + "!"; // " de " + String.valueOf(xTeste.idade) + "!";
+    public String testeUsuarioPost(@RequestBody Aluno body) {
+        return mediaService.showAluno(body);
     }
 }
