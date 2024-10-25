@@ -1,6 +1,6 @@
-package com.javacalcularmedia.eduardo.servico;
+package com.javacalcularmedia.javaMentoriaSpring.servico;
 
-import com.javacalcularmedia.eduardo.entidade.Aluno;
+import com.javacalcularmedia.javaMentoriaSpring.entidade.Aluno;
 import org.springframework.stereotype.Service;
 
 @Service

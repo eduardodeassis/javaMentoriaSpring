@@ -1,8 +1,7 @@
-package com.javacalcularmedia.eduardo.controlador;
+package com.javacalcularmedia.javaMentoriaSpring.controlador;
 
-import com.javacalcularmedia.eduardo.entidade.Aluno;
-import com.javacalcularmedia.eduardo.servico.MediaService;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.javacalcularmedia.javaMentoriaSpring.entidade.Aluno;
+import com.javacalcularmedia.javaMentoriaSpring.servico.MediaService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.PathVariable;

@@ -1,4 +1,4 @@
-package com.javacalcularmedia.eduardo.entidade;
+package com.javacalcularmedia.javaMentoriaSpring.entidade;
 
 import java.util.regex.Pattern;
 

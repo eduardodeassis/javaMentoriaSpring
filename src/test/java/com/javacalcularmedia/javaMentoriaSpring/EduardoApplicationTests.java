@@ -1,10 +1,10 @@
-package com.javacalcularmedia.eduardo;
+package com.javacalcularmedia.javaMentoriaSpring;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class EduardoApplicationTests {
+class JavaMentoriaSpringApplicationTests {
 
 	@Test
 	void contextLoads() {

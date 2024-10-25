@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.javacalcularmedia</groupId>
-	<artifactId>eduardo</artifactId>
+	<artifactId>javaMentoriaSpring</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>eduardo</name>
+	<name>javaMentoriaSpring</name>
 	<description>Projeto calcular media</description>
 	<url/>
 	<licenses>
