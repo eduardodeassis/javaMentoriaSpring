@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @RestController()
-public class MediaController {
+public class MediaControlador {
 
     private MediaService mediaService;
 
-    public MediaController(MediaService mediaService) {
+    public MediaControlador(MediaService mediaService) {
         this.mediaService = mediaService;
     }
 
