@@ -2,33 +2,31 @@ package com.javacalcularmedia.javaMentoriaSpring.controlador;
 
 import com.javacalcularmedia.javaMentoriaSpring.entidade.Aluno;
 import com.javacalcularmedia.javaMentoriaSpring.servico.MediaServico;
+import jakarta.websocket.server.PathParam;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import static org.springframework.web.bind.annotation.RequestMethod.GET;
-import static org.springframework.web.bind.annotation.RequestMethod.POST;
-
-@RestController()
-@RequestMapping(value = "/ex", method = POST)
+@RestController
+@RequestMapping("/media")
 public class MediaControlador {
 
+    @Autowired
     private MediaServico mediaServico;
 
-    public MediaControlador(MediaServico mediaServico) {
-        this.mediaServico = mediaServico;
+    @GetMapping("/ola")
+    public ResponseEntity<String> ola() {
+        return ResponseEntity.ok("Olá, Mundo!"); 
+        // return responseEntity
     }
 
-    @RequestMapping(value = "/ola", method = GET)
-    public String ola() {
-        return "Olá, Mundo!";
-    }
-
-    @RequestMapping(value = "/olaComNome{nome}", method = GET)
-    public String olaComNome(@PathVariable("nome") String nome) {
+    @GetMapping("/olaComNome/{nome}")
+    public String olaComNome(@PathVariable String nome) {
         return "Olá, " + nome + "!";
     }
 
-    @RequestMapping(method = POST)
+    @PostMapping
     public String testeAlunoPost(@RequestBody Aluno body) {
-        return mediaServico.showAluno(body);
+        return mediaServico.verificarAprovacao(body);
     }
 }

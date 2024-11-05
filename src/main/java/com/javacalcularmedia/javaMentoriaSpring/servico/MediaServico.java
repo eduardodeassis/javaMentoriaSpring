@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
 @Service
 public class MediaServico {
 
-    Pattern patFloat = Pattern.compile("^-?\\d+(\\.\\d+)?$");
+    final Pattern patFloat = Pattern.compile("^-?\\d+(\\.\\d+)?$");
 
     public float getMedia(Aluno aluno) {
         String[] splitNotas = aluno.getNotas().replace(" ", "").replace(",", ".").split(";");
@@ -23,18 +23,20 @@ public class MediaServico {
         return total / cont;
     }
 
-    public String showAluno(Aluno aluno) {
+
+    // cuidado com nomes em ingles, por causa da publicenter
+    public String verificarAprovacao(Aluno aluno) {
        float media = getMedia(aluno);
        String status = "";
        if (media < 6) {
            status = "O aluno foi reprovado!";
        }
        else {
+
            status = "O aluno foi aprovado!";
        }
 
-       return String.format("Aluno: %s\nMédia: %.2f\n%s"
-               , aluno.getNome(), media, status);
+       return String.format("Aluno: %s\nMédia: %.2f\n%s", aluno.getNome(), media, status);
     }
 
 }

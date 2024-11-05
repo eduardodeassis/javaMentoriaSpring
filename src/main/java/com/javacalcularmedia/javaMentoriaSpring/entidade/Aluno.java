@@ -1,5 +1,8 @@
 package com.javacalcularmedia.javaMentoriaSpring.entidade;
 
+// AlunoEntidade
+// usar a JPA -> JDBC
+
 public class Aluno {
     private String nome;
     private String notas;
